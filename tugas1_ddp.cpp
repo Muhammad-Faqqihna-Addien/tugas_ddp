@@ -1,20 +1,22 @@
 #include <iostream>
 using namespace std;
 
-int main(){
-	long detik,totdetik;
-	int jam,menit;
-	
-	cout<<"Masukkan Angka >1 (dalam satuan detik) : ";
-	cin>>detik;
-	
-	jam=(detik%86400)/3400;
-	menit=(detik%3600)/60;
-	totdetik=(detik%60);
-	
-	cout<<endl;
-	cout<<"hasil konversi :";
-	cout<<detik<<" "<<"detik"<<" "<<"="<<" "<<jam<<" "<<"jam"<<" "<<menit<<" "<<"menit"<<" "<<totdetik<<" "<<"detik"<<endl;
-	
-	return 0;
+int main() {
+    long totdetik;
+    float jam, menit, detik;
+
+    cout << "Masukkan Waktu (detik): ";
+    cin >> totdetik;
+
+    jam   = (totdetik / 3600) % 24;
+    menit = ((totdetik / 60) % 60);
+    detik = totdetik % 60;
+
+    cout << endl;
+    cout << totdetik << " detik = "
+         << jam << " jam "
+         << menit << " menit "
+         << detik << " detik." << endl;
+
+    return 0;
 }
