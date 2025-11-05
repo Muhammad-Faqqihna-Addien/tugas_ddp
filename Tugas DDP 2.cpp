@@ -8,7 +8,7 @@ int main() {
     cout << "Masukkan Waktu (detik): ";
     cin >> totdetik;
 
-    hari  =totdetik / 86400;
+    hari  = totdetik / 86400;
     jam   = (totdetik / 3600) % 24;
     menit = ((totdetik / 60) % 60);
     detik = totdetik % 60;
@@ -22,3 +22,4 @@ int main() {
 
     return 0;
 }
+
